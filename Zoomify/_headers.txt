@@ -1,12 +1,14 @@
 /metadata.json
   Access-Control-Allow-Origin: *
-/0/*
+/11/*
   Access-Control-Allow-Origin: *
-/1/*
+/12/*
   Access-Control-Allow-Origin: *
-/2/*
+/13/*
   Access-Control-Allow-Origin: *
-/3/*
+/14/*
   Access-Control-Allow-Origin: *
-/4/*
+/15/*
+  Access-Control-Allow-Origin: *
+/16/*
   Access-Control-Allow-Origin: *
