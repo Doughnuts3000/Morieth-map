@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Morieth Map</title>
-<meta charset="utf-8">
+<title>Morieth Geo Map</title>
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <style type="text/css">
 html, body { margin:0; padding: 0; height: 100%; width: 100%; }
 body { width:100%; height:100%; background: #ffffff; }
-#map { position: absolute; height: 100%; width: 100%; background-color: #FFFFFF; }
+#map { position: absolute; height: 100%; width: 100%; }
 #slider { position: absolute; top: 10px; right: 10px; }
 </style>
 <link rel="stylesheet" href="https://cdn.maptiler.com/ol/v6.12.0/ol.css" type="text/css">
@@ -18,51 +17,36 @@ body { width:100%; height:100%; background: #ffffff; }
 </head>
 <body>
 <div id="map"></div>
-<input id="slider" type="range" min="0" max="1" step="0.1" value="1" oninput="layer.setOpacity(this.value)">
+<input id="slider" type="range" min="0" max="1" step="0.1" value="1" oninput="layer.setOpacity(parseFloat(this.value))">
 <script type="text/javascript">
-var mapExtent = [0.00000000, -11823.00000000, 11823.00000000, 0.00000000];
-var mapMinZoom = 0;
-var mapMaxZoom = 4;
-var mapMaxResolution = 2.00000000;
-var tileExtent = [0.00000000, -11823.00000000, 11823.00000000, 0.00000000];
-var tileWidth = 512;
-var tileHeight = 512;
-
-var mapResolutions = [];
-for (var z = 0; z <= mapMaxZoom; z++) {
-  mapResolutions.push(Math.pow(2, mapMaxZoom - z) * mapMaxResolution);
-}
-
-var mapTileGrid = new ol.tilegrid.TileGrid({
-  tileSize: [tileWidth, tileHeight],
-  extent: tileExtent,
-  minZoom: mapMinZoom,
-  resolutions: mapResolutions
-});
-
+var mapExtent = ol.proj.transformExtent([0.992715, 51.990696, 1.309543, 52.161431], 'EPSG:4326', 'EPSG:3857');
+var mapMinZoom = 11;
+var mapMaxZoom = 14;
 var layer = new ol.layer.Tile({
+  extent: mapExtent,
   source: new ol.source.XYZ({
     attributions: '<a href="https://www.maptiler.com/engine/">Rendered with MapTiler Engine</a>, non-commercial use only',
-    projection: 'PIXELS',
-    tileGrid: mapTileGrid,
-    tilePixelRatio: 1.00000000,
     url: "{z}/{x}/{y}.png",
+    tilePixelRatio: 1.00000000,
+    minZoom: mapMinZoom,
+    maxZoom: mapMaxZoom
   })
+});
+var mapLayer = new ol.layer.Tile({
+  source: new ol.source.OSM()
 });
 
 var map = new ol.Map({
   target: 'map',
   layers: [
-    layer,
+    mapLayer,
+    layer
   ],
   view: new ol.View({
-    projection: ol.proj.get('PIXELS'),
-    extent: mapExtent,
-    maxResolution: mapTileGrid.getResolution(mapMinZoom),
-    constrainOnlyCenter: true
+    center: ol.proj.fromLonLat([1.151129, 52.076064]),
+    zoom: 11
   })
 });
-map.getView().fit(mapExtent, map.getSize());
 </script>
 </body>
 </html>
