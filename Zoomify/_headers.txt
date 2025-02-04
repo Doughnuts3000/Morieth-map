@@ -1,0 +1,12 @@
+/metadata.json
+  Access-Control-Allow-Origin: *
+/0/*
+  Access-Control-Allow-Origin: *
+/1/*
+  Access-Control-Allow-Origin: *
+/2/*
+  Access-Control-Allow-Origin: *
+/3/*
+  Access-Control-Allow-Origin: *
+/4/*
+  Access-Control-Allow-Origin: *
