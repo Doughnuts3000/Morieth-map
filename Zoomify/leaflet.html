@@ -19,9 +19,9 @@
   <div id="map"></div>
   <input id="slider" type="range" min="0" max="1" step="0.1" value="1" oninput="layer.setOpacity(this.value)">
   <script type="text/javascript">
-    var mapExtent = [0.99271520, 51.99069645, 1.30954296, 52.16143083];
+    var mapExtent = [-0.00022874, -0.10019861, 0.10020534, 0.00015906];
     var mapMinZoom = 11;
-    var mapMaxZoom = 14;
+    var mapMaxZoom = 16;
     var bounds = new L.LatLngBounds(
       new L.LatLng(mapExtent[1], mapExtent[0]),
       new L.LatLng(mapExtent[3], mapExtent[2]));
@@ -36,7 +36,7 @@
       tms: false
     };
     layer = L.tileLayer('{z}/{x}/{y}.png', options).addTo(map);
-    map.setZoom(11);
+    map.setZoom(12);
   </script>
 </body>
 </html>

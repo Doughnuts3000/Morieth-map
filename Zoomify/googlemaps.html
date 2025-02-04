@@ -32,10 +32,10 @@ body { background: #f4f4f4;}
 <script type="text/javascript">
 var map;
 var mapBounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(51.990696, 0.992715),
-    new google.maps.LatLng(52.161431, 1.309543));
+    new google.maps.LatLng(-0.100199, -0.000229),
+    new google.maps.LatLng(0.000159, 0.100205));
 var mapMinZoom = 11;
-var mapMaxZoom = 14;
+var mapMaxZoom = 16;
 var maptiler = new google.maps.ImageMapType({
     getTileUrl: function(coord, zoom) { 
         var proj = map.getProjection();
@@ -64,7 +64,7 @@ function init() {
     var opts = {
         tilt:0,
         streetViewControl: false,
-        center: new google.maps.LatLng(52.076064, 1.151129),
+        center: new google.maps.LatLng(-0.050020, 0.049988),
         zoom: 11
     };
     map = new google.maps.Map(document.getElementById("map"), opts);
