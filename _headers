@@ -1,24 +1,12 @@
-/leaflet.html
+/Map New/*
+  Access-Control-Allow-Origin: *
+/draft.html
+  Access-Control-Allow-Origin: *
+/draft.json
   Access-Control-Allow-Origin: *
 /index.html
   Access-Control-Allow-Origin: *
-/openlayers.html
-  Access-Control-Allow-Origin: *
-/googlemaps.html
-  Access-Control-Allow-Origin: *
 /metadata.json
   Access-Control-Allow-Origin: *
-/11/*
-  Access-Control-Allow-Origin: *
-/12/*
-  Access-Control-Allow-Origin: *
-/13/*
-  Access-Control-Allow-Origin: *
-/14/*
-  Access-Control-Allow-Origin: *
-/15/*
-  Access-Control-Allow-Origin: *
-/16/*
-  Access-Control-Allow-Origin: *
-/Map New/*
+/published.json
   Access-Control-Allow-Origin: *
