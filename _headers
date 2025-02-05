@@ -20,3 +20,5 @@
   Access-Control-Allow-Origin: *
 /16/*
   Access-Control-Allow-Origin: *
+/Map New/*
+  Access-Control-Allow-Origin: *
