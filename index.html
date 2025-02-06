@@ -74,15 +74,7 @@ html, body {
             timeline = new TL.Timeline('timeline-embed','https://docs.google.com/spreadsheets/d/1mbJ-oPP27oUGdATrSqdkYsyvg_YPUSMDti-vgH0lMzM/edit?usp=sharing');
         </script>
 		
-		<script>
-    const timelineEmbed = document.getElementById('timeline-embed');
-    const timeaxis = document.querySelector('.tl-timeaxis');
-    timelineEmbed.addEventListener('scroll', () => {
-      const scrollTop = timelineEmbed.scrollTop;
-      // Adjust the position of the time axis based on the scroll position
-      timeaxis.style.top = `${scrollTop * -1}px`; // Inverse scroll effect
-    });
-  </script>
+		
   
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -183,6 +175,15 @@ html, body {
             storymap.updateDisplay();
         }
     }
+  </script>
+<script>
+    const timelineEmbed = document.getElementById('timeline-embed');
+    const timeaxis = document.querySelector('.tl-timeaxis');
+    timelineEmbed.addEventListener('scroll', () => {
+      const scrollTop = timelineEmbed.scrollTop;
+      // Adjust the position of the time axis based on the scroll position
+      timeaxis.style.top = `${scrollTop * -1}px`; // Inverse scroll effect
+    });
   </script>
 </body>
 </html>
