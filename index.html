@@ -177,13 +177,18 @@ html, body {
     }
   </script>
 <script>
+
     const timelineEmbed = document.getElementById('timeline-embed');
     const timeaxis = document.querySelector('.tl-timeaxis');
+	if (timeaxis && timelineEmbed){
     timelineEmbed.addEventListener('scroll', () => {
       const scrollTop = timelineEmbed.scrollTop;
       // Adjust the position of the time axis based on the scroll position
       timeaxis.style.top = `${scrollTop * -1}px`; // Inverse scroll effect
     });
+	}else {
+        console.error('Required elements not found!');
+      }
   </script>
 </body>
 </html>
