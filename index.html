@@ -37,6 +37,12 @@ html, body {
 .tl-storyslider{
   display: none;
 }
+.tl-timeaxis {
+  position: fixed
+  /* top: 0; Keeps it at the top of its container */
+  z-index: 10; /* Ensures it stays above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+}
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
