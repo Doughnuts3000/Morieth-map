@@ -37,11 +37,6 @@ html, body {
 .tl-storyslider{
   display: none;
 }
-.tl-timeaxis {
-  position: absolute
- top: 0 /* ; Keeps it at the top of its container */
-  z-index: 10; /* Ensures it stays above other content */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
 }
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
@@ -71,11 +66,15 @@ html, body {
             // and the element must have CSS styling to give it width and height
             // optionally, a third argument with configuration options can be passed.
             // See below for more about options.
-            timeline = new TL.Timeline('timeline-embed','https://docs.google.com/spreadsheets/d/1mbJ-oPP27oUGdATrSqdkYsyvg_YPUSMDti-vgH0lMzM/edit?usp=sharing');
+			 // Fetch the JSON file from your server
+			fetch('timeline.json')
+			.then(response => response.json()) // Parse the JSON data
+			.then(timeline_json => {
+            // Create the timeline with the fetched JSON
+            window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+        })
+            //timeline = new TL.Timeline('timeline-embed','https://docs.google.com/spreadsheets/d/1mbJ-oPP27oUGdATrSqdkYsyvg_YPUSMDti-vgH0lMzM/edit?usp=sharing');
         </script>
-		
-		
-  
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -175,29 +174,6 @@ html, body {
             storymap.updateDisplay();
         }
     }
-  </script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    const timeaxis = document.querySelector('.tl-timeaxis');
-    const timelineEmbed = document.getElementById('timeline-embed');
-
-    console.log('timeaxis:', timeaxis);
-    console.log('timelineEmbed:', timelineEmbed);
-
-    if (timeaxis && timelineEmbed) {
-      console.log('Elements found!');
-
-      timelineEmbed.addEventListener('scroll', () => {
-        console.log('Scrolling...');
-        const scrollTop = timelineEmbed.scrollTop;
-        timeaxis.style.top = `${scrollTop * -1}px`; // Adjust the time axis
-      });
-    } else {
-      console.error('Required elements not found!');
-    }
-  }, 500); // Delay the script by 500ms
-});
   </script>
 </body>
 </html>

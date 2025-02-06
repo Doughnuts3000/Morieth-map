@@ -1,1 +1,65 @@
-{"storymap": {"call_to_action": true, "call_to_action_text": "", "map_as_image": false, "map_type": "zoomify", "slides": [{"date": "", "location": {"line": true}, "media": {"caption": "", "credit": "", "url": ""}, "text": {"headline": "TITLE", "text": ""}, "type": "overview"}, {"date": "", "location": {"lat": 33.137551192346145, "line": true, "lon": -54.140625, "zoom": 1}, "media": {"caption": "", "credit": "", "url": ""}, "text": {"headline": "Test", "text": "Test text"}}, {"date": "", "text": {"headline": "Test2", "text": ""}, "media": {"url": "", "credit": "", "caption": ""}, "location": {"line": true, "lat": 33.137551192346145, "lon": -54.140625, "zoom": 1}}], "zoomify": {"attribution": "", "height": "11823", "path": "https://doughnuts3000.github.io/Morieth-map/Map New/", "width": "11823"}}}
+{
+    "storymap": {
+        "call_to_action": true,
+        "call_to_action_text": "",
+        "map_as_image": false,
+        "map_type": "zoomify",
+        "slides": [{
+                "date": "",
+                "location": {
+                    "line": true
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "",
+                    "url": ""
+                },
+                "text": {
+                    "headline": "TITLE",
+                    "text": ""
+                },
+                "type": "overview"
+            }, {
+                "date": "",
+                "location": {
+                    "lat": 33.137551192346145,
+                    "line": true,
+                    "lon": -54.140625,
+                    "zoom": 1
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "",
+                    "url": ""
+                },
+                "text": {
+                    "headline": "Test",
+                    "text": "Test text"
+                }
+            }, {
+                "date": "",
+                "location": {
+                    "lat": 33.137551192346145,
+                    "line": true,
+                    "lon": -54.140625,
+                    "zoom": 1
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "",
+                    "url": ""
+                },
+                "text": {
+                    "headline": "Test2",
+                    "text": ""
+                }
+            }
+        ],
+        "zoomify": {
+            "attribution": "",
+            "height": "11823",
+            "path": "https://doughnuts3000.github.io/Morieth-map/Map New/",
+            "width": "11823"
+        }
+    }
+}
