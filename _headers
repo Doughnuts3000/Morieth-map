@@ -10,3 +10,5 @@
   Access-Control-Allow-Origin: *
 /published.json
   Access-Control-Allow-Origin: *
+/timeline.json
+  Access-Control-Allow-Origin: *
