@@ -181,6 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const timelineEmbed = document.getElementById('timeline-embed');
     const timeaxis = document.querySelector('.tl-timeaxis');
 	if (timeaxis && timelineEmbed){
+	console.error('elements found!');
     timelineEmbed.addEventListener('scroll', () => {
       const scrollTop = timelineEmbed.scrollTop;
       // Adjust the position of the time axis based on the scroll position
