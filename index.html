@@ -75,12 +75,13 @@ html, body {
 			})
          //  timeline = new TL.Timeline('timeline-embed','https://docs.google.com/spreadsheets/d/1mbJ-oPP27oUGdATrSqdkYsyvg_YPUSMDti-vgH0lMzM/edit?usp=sharing');
         
-		var groups = document.querySelectorAll('.tl-timegroup');
+		var groups = document.querySelectorAll(".tl-timegroup");
 		function getRandomColor() {
         const letters = '0123456789ABCDEF';
         let color = '#';
 			for (let i = 0; i < 6; i++) {
 				color += letters[Math.floor(Math.random() * 16)];
+				console.error("Found some colours mate!");
 			}
         return color;
 		}
