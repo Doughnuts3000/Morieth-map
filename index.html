@@ -177,7 +177,7 @@ html, body {
     }
   </script>
 <script>
-
+document.addEventListener('DOMContentLoaded', function() {
     const timelineEmbed = document.getElementById('timeline-embed');
     const timeaxis = document.querySelector('.tl-timeaxis');
 	if (timeaxis && timelineEmbed){
@@ -189,6 +189,7 @@ html, body {
 	}else {
         console.error('Required elements not found!');
       }
+	 }
   </script>
 </body>
 </html>
