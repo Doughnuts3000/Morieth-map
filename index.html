@@ -28,25 +28,6 @@ html, body {
 }
 #storymap-embed {
     /*border: 1px solid #999;*/
-
-/* Parent container as a flexbox */
-#container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Take full viewport height */
-}
-
-/* Map section */
-#map-container {
-  flex: 1;  /* Take up remaining space */
-  height: 100%; /* Ensure map takes available space */
-}
-
-/* Timeline section (or whatever section below) */
-#timeline-container {
-/* Set a fixed height or let it grow naturally */
-  background-color: #f1f1f1; /* Just for visual differentiation */
-}
 }
 .tl-storyslider {
   display: none;
@@ -61,18 +42,12 @@ html, body {
 
 
 
-<div id=container>
-	<div id="map-container">
+
 		<div id="storymap-embed" style="width:100%; height:75%"></div>
-	</div>
 <!-- timeline 2 -->
 
         <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-	<div id="timeline-container">
 		<div id='timeline-embed' style="width: 100%; height:25%"></div>
-	</div>
-
-</div>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M95DDQGLWH"></script>
   
