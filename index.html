@@ -185,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const scrollTop = timelineEmbed.scrollTop;
       // Adjust the position of the time axis based on the scroll position
       timeaxis.style.top = `${scrollTop * -1}px`; // Inverse scroll effect
+	  console.log('Doing stuff');
     });
 	}else {
         console.error('Required elements not found!');
