@@ -176,21 +176,28 @@ html, body {
         }
     }
   </script>
-<script>
+<script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
-    const timelineEmbed = document.getElementById('timeline-embed');
+  setTimeout(function() {
     const timeaxis = document.querySelector('.tl-timeaxis');
-	if (timeaxis && timelineEmbed){
-	console.error('elements found!');
-    timelineEmbed.addEventListener('scroll', () => {
-      const scrollTop = timelineEmbed.scrollTop;
-      // Adjust the position of the time axis based on the scroll position
-      timeaxis.style.top = `${scrollTop * -1}px`; // Inverse scroll effect
-	  console.error('doing stuff!');
-    })}else {
-        console.error('Required elements not found!');
-      }
-	 };
+    const timelineEmbed = document.getElementById('timeline-embed');
+
+    console.log('timeaxis:', timeaxis);
+    console.log('timelineEmbed:', timelineEmbed);
+
+    if (timeaxis && timelineEmbed) {
+      console.log('Elements found!');
+
+      timelineEmbed.addEventListener('scroll', () => {
+        console.log('Scrolling...');
+        const scrollTop = timelineEmbed.scrollTop;
+        timeaxis.style.top = `${scrollTop * -1}px`; // Adjust the time axis
+      });
+    } else {
+      console.error('Required elements not found!');
+    }
+  }, 500); // Delay the script by 500ms
+});
   </script>
 </body>
 </html>
