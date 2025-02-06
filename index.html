@@ -74,7 +74,23 @@ html, body {
            window.timeline = new TL.Timeline('timeline-embed', timeline_json);
 			})
          //  timeline = new TL.Timeline('timeline-embed','https://docs.google.com/spreadsheets/d/1mbJ-oPP27oUGdATrSqdkYsyvg_YPUSMDti-vgH0lMzM/edit?usp=sharing');
-        </script>
+        
+		var groups = document.querySelectorAll('.tl-timegroup');
+		function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+			for (let i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+        return color;
+		}
+
+		// Apply random color to each group
+		groups.forEach(function(group) {
+			group.style.backgroundColor = getRandomColor();
+		});
+		
+		</script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
