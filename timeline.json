@@ -121,7 +121,7 @@
         "lat": 34.0522,
         "lon": -118.2437
       },
-      "group": "Group B",
+      "group": "Funkytown",
       "background": {
         "url": "https://example.com/background-image.jpg",
         "color": "#00ff00"
@@ -147,7 +147,7 @@
         "lat": 34.0522,
         "lon": -118.2437
       },
-      "group": "Group B",
+      "group": "The Group",
       "background": {
         "url": "https://example.com/background-image.jpg",
         "color": "#00ff00"
