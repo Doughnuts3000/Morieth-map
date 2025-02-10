@@ -37,6 +37,14 @@ html, body {
 .tl-storyslider{
   display: none;
 }
+.tl-timenav-slider {
+    position: fixed !important;  /* Sticks it to the viewport */
+    //bottom: 0;                   /* Aligns to the bottom */
+   // left: 0;                     /* Aligns it to the left */
+   // width: 100%;                 /* Ensures it stretches across */
+   // background: rgba(255, 255, 255, 0.9); /* Optional: Semi-transparent background */
+   z-index: 1000;               /* Ensures it stays above other elements */
+}
 }
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
@@ -86,7 +94,7 @@ function checkIfGroupsLoaded() {
         // Add scroll event listener once the timeline is fully loaded
         timelineEmbed.addEventListener('scroll', () => {
             const scrollTop = timelineEmbed.scrollTop;
-            timeAxis.style.top = `${-scrollTop}px`; // Apply scroll behavior
+           // timeAxis.style.top = `${scrollTop}px`; // Apply scroll behavior
         });
     } else {
         // Retry after a short delay to give TimelineJS more time to load
