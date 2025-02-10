@@ -99,13 +99,14 @@ function checkIfGroupsLoaded() {
 
             // Get the current position of the timeAxis relative to the timelineEmbed
             const rect = timeAxis.getBoundingClientRect();
+			const Max = timelineEmbed.clientHeight;
 
             // Adjust the position of timeAxis based on scroll
             // We use transform here to apply a smoother transition instead of directly modifying top
-            timeAxis.style.transform = `translateY(${timelineEmbed.clientHeight-scrollAmount}px)`;
+            timeAxis.style.transform = `translateY(${Max-scrollAmount}px)`;
 
             // Log information for debugging
-            console.log("Scroll position: " + -scrollAmount);
+            console.log("Scroll position: " + scrollAmount);
             console.log("TimeAxis position (Y): " + rect.top);
             console.log("TimeAxis translateY: " + timeAxis.style.transform);
 			console.log("TimeAxis translateY: " + timeAxis.style.top);
