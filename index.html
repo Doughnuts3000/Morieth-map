@@ -54,7 +54,7 @@ html, body {
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M95DDQGLWH"></script>
 	<!-- Timeline 3 -->
 	<script type="text/javascript">
-   // Fetch the JSON file from your server
+// Fetch the JSON file from your server
 fetch('timeline.json')
     .then(response => response.json()) // Parse the JSON data
     .then(timeline_json => {
@@ -79,19 +79,23 @@ function checkIfGroupsLoaded() {
     }
 
     const timelineEmbed = document.getElementById('timeline-embed');
-    const timeAxis = document.querySelector(".tl-timenav-slider");  // Fixed variable name
+    const timeAxis = document.querySelector(".tl-timenav-slider");
 
-    // Check if timeAxis exists before adding event listener
+    // Check if timeAxis exists before adding the scroll event listener
     if (timeAxis) {
-        // Add scroll event listener
+        // Add scroll event listener once the timeline is fully loaded
         timelineEmbed.addEventListener('scroll', () => {
             const scrollTop = timelineEmbed.scrollTop;
-            timeAxis.style.top = `${scrollTop * -1}px`; // Scroll behavior
+            timeAxis.style.top = `${scrollTop * -1}px`; // Apply scroll behavior
         });
     } else {
-        console.warn("timeAxis element not found!");
+        // Retry after a short delay to give TimelineJS more time to load
+        setTimeout(function() {
+            checkIfGroupsLoaded();  // Retry after a delay
+        }, 500);
     }
 }
+
 
 </script>
 
