@@ -86,7 +86,7 @@ function checkIfGroupsLoaded() {
         // Add scroll event listener once the timeline is fully loaded
         timelineEmbed.addEventListener('scroll', () => {
             const scrollTop = timelineEmbed.scrollTop;
-            timeAxis.style.top = `${scrollTop * -1}px`; // Apply scroll behavior
+            timeAxis.style.top = `${scrollTop}px`; // Apply scroll behavior
         });
     } else {
         // Retry after a short delay to give TimelineJS more time to load
