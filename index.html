@@ -54,36 +54,40 @@ html, body {
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M95DDQGLWH"></script>
 	<!-- Timeline 3 -->
 	<script type="text/javascript">
-    // Fetch the JSON file from your server
-    fetch('timeline.json')
-        .then(response => response.json()) // Parse the JSON data
-        .then(timeline_json => {
-            // Create the TimelineJS instance
-            window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+   // Fetch the JSON file from your server
+fetch('timeline.json')
+    .then(response => response.json()) // Parse the JSON data
+    .then(timeline_json => {
+        // Create the TimelineJS instance
+        window.timeline = new TL.Timeline('timeline-embed', timeline_json);
 
-            // Start checking for groups AFTER TimelineJS has initialized
-            checkIfGroupsLoaded();
+        // Start checking for groups AFTER TimelineJS has initialized
+        checkIfGroupsLoaded();
+    });
+
+function checkIfGroupsLoaded() {
+    var groups = document.querySelectorAll(".tl-timegroup");
+
+    if (groups.length > 0) {
+        // Apply color to each group
+        groups.forEach(function (group) {
+            group.style.backgroundColor = '#ff00ff';
         });
-
-    function checkIfGroupsLoaded() {
-        var groups = document.querySelectorAll(".tl-timegroup");
-
-        if (groups.length > 0) {
-            // Apply color to each group
-            groups.forEach(function (group) {
-                group.style.backgroundColor = '#ff00ff';
-            });		
-        } else {
-            // Poll again if the groups are not loaded
-            setTimeout(checkIfGroupsLoaded, 100); // Check every 100ms
-        }
-		const timelineEmbed = document.getElementById('timeline-embed');
-		const TimeAxis = document.querySelector(".tl-timenav-slider");
-		timelineEmbed.addEventListener('scroll', () => {
-			const scrollTop = timelineEmbed.scrollTop;
-			timeaxis.style.top = `${scrollTop * -1}px`;
-		}
+    } else {
+        // Poll again if the groups are not loaded
+        setTimeout(checkIfGroupsLoaded, 100); // Check every 100ms
     }
+
+    const timelineEmbed = document.getElementById('timeline-embed');
+    const timeAxis = document.querySelector(".tl-timenav-slider");  // Fixed variable name
+
+    // Add scroll event listener
+    timelineEmbed.addEventListener('scroll', () => {
+        const scrollTop = timelineEmbed.scrollTop;
+        timeAxis.style.top = `${scrollTop * -1}px`; // Scroll behavior
+    });
+}
+
 </script>
 
 <script>
