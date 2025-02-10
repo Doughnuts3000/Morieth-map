@@ -37,6 +37,12 @@ html, body {
 .tl-storyslider{
   display: none;
 }
+.leaflet-control-attribution leaflet-control{
+  display: none;
+}
+.tl-attribution{
+display: none;
+}
 }
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
@@ -87,6 +93,7 @@ function checkIfGroupsLoaded() {
         timelineEmbed.addEventListener('scroll', () => {
             const scrollAmount = timelineEmbed.scrollTop;
            timeAxis.style.top = `${-scrollAmount}px`;
+		   console.log("Container Pos:" +scrollAmount + "Other pos:" + timeAxis);
         });
     } else {
         // Retry after a short delay to give TimelineJS more time to load
