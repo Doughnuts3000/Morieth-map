@@ -102,6 +102,58 @@
       },
       "unique_id": "event2"
     }
+	{
+      "start_date": {
+        "year": 2025,
+        "month": 3,
+        "day": 12
+      },
+      "text": {
+        "headline": "The Second Event",
+        "text": "<p>This is the second event description.</p>"
+      },
+      "media": {
+        "url": "https://example.com/event2.jpg",
+        "caption": "An image of the second event",
+        "credit": "Image Credit"
+      },
+      "location": {
+        "lat": 34.0522,
+        "lon": -118.2437
+      },
+      "group": "Group B",
+      "background": {
+        "url": "https://example.com/background-image.jpg",
+        "color": "#00ff00"
+      },
+      "unique_id": "hello world"
+    },
+	{
+      "start_date": {
+        "year": 2025,
+        "month": 9,
+        "day": 10
+      },
+      "text": {
+        "headline": "The Second Event",
+        "text": "<p>This is the second event description.</p>"
+      },
+      "media": {
+        "url": "https://example.com/event2.jpg",
+        "caption": "An image of the second event",
+        "credit": "Image Credit"
+      },
+      "location": {
+        "lat": 34.0522,
+        "lon": -118.2437
+      },
+      "group": "Group B",
+      "background": {
+        "url": "https://example.com/background-image.jpg",
+        "color": "#00ff00"
+      },
+      "unique_id": "Smile!"
+    }
   ],
   "eras": [
     {
