@@ -92,8 +92,18 @@ function checkIfGroupsLoaded() {
         // Add scroll event listener once the timeline is fully loaded
         timelineEmbed.addEventListener('scroll', () => {
             const scrollAmount = timelineEmbed.scrollTop;
-           timeAxis.style.top = `${-scrollAmount}px`;
-		   console.log("Container Pos:" +scrollAmount + "Other pos:" + timelineEmbed.clientHeight + "test" + timeAxis.style.top);
+
+            // Get the current position of the timeAxis relative to the timelineEmbed
+            const rect = timeAxis.getBoundingClientRect();
+
+            // Adjust the position of timeAxis based on scroll
+            // We use transform here to apply a smoother transition instead of directly modifying top
+            timeAxis.style.transform = `translateY(${scrollAmount}px)`;
+
+            // Log information for debugging
+            console.log("Scroll position: " + scrollAmount);
+            console.log("TimeAxis position (Y): " + rect.top);
+            console.log("TimeAxis translateY: " + timeAxis.style.transform);
         });
     } else {
         // Retry after a short delay to give TimelineJS more time to load
