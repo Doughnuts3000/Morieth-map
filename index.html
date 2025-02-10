@@ -81,11 +81,16 @@ function checkIfGroupsLoaded() {
     const timelineEmbed = document.getElementById('timeline-embed');
     const timeAxis = document.querySelector(".tl-timenav-slider");  // Fixed variable name
 
-    // Add scroll event listener
-    timelineEmbed.addEventListener('scroll', () => {
-        const scrollTop = timelineEmbed.scrollTop;
-        timeAxis.style.top = `${scrollTop * -1}px`; // Scroll behavior
-    });
+    // Check if timeAxis exists before adding event listener
+    if (timeAxis) {
+        // Add scroll event listener
+        timelineEmbed.addEventListener('scroll', () => {
+            const scrollTop = timelineEmbed.scrollTop;
+            timeAxis.style.top = `${scrollTop * -1}px`; // Scroll behavior
+        });
+    } else {
+        console.warn("timeAxis element not found!");
+    }
 }
 
 </script>
