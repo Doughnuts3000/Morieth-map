@@ -79,8 +79,8 @@
     {
       "start_date": {
         "year": 2025,
-        "month": 3,
-        "day": 10
+        "month": 10,
+        "day": 11
       },
       "text": {
         "headline": "The Second Event",
@@ -105,8 +105,8 @@
 	{
       "start_date": {
         "year": 2025,
-        "month": 3,
-        "day": 12
+        "month": 1,
+        "day": 2
       },
       "text": {
         "headline": "The Second Event",
@@ -126,13 +126,13 @@
         "url": "https://example.com/background-image.jpg",
         "color": "#00ff00"
       },
-      "unique_id": "hello world"
+      "unique_id": "helloworld"
     },
 	{
       "start_date": {
         "year": 2025,
-        "month": 9,
-        "day": 10
+        "month": 11,
+        "day": 12
       },
       "text": {
         "headline": "The Second Event",
@@ -152,7 +152,7 @@
         "url": "https://example.com/background-image.jpg",
         "color": "#00ff00"
       },
-      "unique_id": "Smile!"
+      "unique_id": "Smile"
     }
   ],
   "eras": [
