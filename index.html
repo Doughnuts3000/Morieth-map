@@ -72,14 +72,20 @@ html, body {
             // Apply color to each group
             groups.forEach(function (group) {
                 group.style.backgroundColor = '#ff00ff';
-                group.style.color = '#00ff00';
-            });
+            });		
         } else {
             // Poll again if the groups are not loaded
             setTimeout(checkIfGroupsLoaded, 100); // Check every 100ms
         }
+		const timelineEmbed = document.getElementById('timeline-embed');
+		const TimeAxis = document.querySelector(".tl-timenav-slider");
+		timelineEmbed.addEventListener('scroll', () => {
+			const scrollTop = timelineEmbed.scrollTop;
+			timeaxis.style.top = `${scrollTop * -1}px`;
+		}
     }
 </script>
+
 <script>
     window.dataLayer = window.dataLayer || [];
 
