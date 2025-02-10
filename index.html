@@ -98,7 +98,7 @@ function checkIfGroupsLoaded() {
 
             // Adjust the position of timeAxis based on scroll
             // We use transform here to apply a smoother transition instead of directly modifying top
-            timeAxis.style.transform = `translateY(${scrollAmount}px)`;
+            timeAxis.style.transform = `translateY(${-scrollAmount}px)`;
 
             // Log information for debugging
             console.log("Scroll position: " + scrollAmount);
