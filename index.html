@@ -59,6 +59,7 @@ html, body {
   
   <!-- Timeline 3 -->
         <script type="text/javascript">
+		
             // The TL.Timeline constructor takes at least two arguments:
             // the id of the Timeline container (no '#'), and
             // the URL to your JSON data file or Google spreadsheet.
@@ -71,17 +72,24 @@ html, body {
 			.then(response => response.json()) // Parse the JSON data
 			.then(timeline_json => {
             // Create the timeline with the fetched JSON
-           window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+			window.timeline = new TL.Timeline('timeline-embed', timeline_json);
 			})
          //  timeline = new TL.Timeline('timeline-embed','https://docs.google.com/spreadsheets/d/1mbJ-oPP27oUGdATrSqdkYsyvg_YPUSMDti-vgH0lMzM/edit?usp=sharing');
         
-		<!-- var groups = document.querySelectorAll(".tl-timegroup");
-
+		document.addEventListener('DOMContentLoaded', function() {
+		var groups = document.querySelectorAll(".tl-timegroup");
+		function checkIfGroupsLoaded() {
 		// Apply color to each group
-		groups.forEach(function(group) {
-			group.style.backgroundColor = '#ff00ff';
-			 group.style.color = '#00ff00';
-		}); -->
+		groups.forEach(function(groups) {
+			groups.style.backgroundColor = '#ff00ff';
+			 groups.style.color = '#00ff00';
+		})
+		}else {
+            // Poll again if the groups are not loaded
+            setTimeout(checkIfGroupsLoaded, 100); // Check every 100ms
+        }
+
+		}
 		
 		</script>
   <script>
