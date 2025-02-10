@@ -73,24 +73,22 @@ html, body {
 			.then(timeline_json => {
             // Create the timeline with the fetched JSON
 			window.timeline = new TL.Timeline('timeline-embed', timeline_json);
-			})
+			});
          //  timeline = new TL.Timeline('timeline-embed','https://docs.google.com/spreadsheets/d/1mbJ-oPP27oUGdATrSqdkYsyvg_YPUSMDti-vgH0lMzM/edit?usp=sharing');
         
 		document.addEventListener('DOMContentLoaded', function() {
 		var groups = document.querySelectorAll(".tl-timegroup");
-		function checkIfGroupsLoaded() {
-		// Apply color to each group
-		groups.forEach(function(groups) {
-			groups.style.backgroundColor = '#ff00ff';
-			 groups.style.color = '#00ff00';
-		})
-		}else {
-            // Poll again if the groups are not loaded
-            setTimeout(checkIfGroupsLoaded, 100); // Check every 100ms
-        }
-
-		}
-		
+			function checkIfGroupsLoaded() {
+			// Apply color to each group
+				groups.forEach(function(groups) {
+				groups.style.backgroundColor = '#ff00ff';
+				groups.style.color = '#00ff00';
+				})
+			} else {
+				// Poll again if the groups are not loaded
+				setTimeout(checkIfGroupsLoaded, 100); // Check every 100ms
+			};
+		};	
 		</script>
   <script>
     window.dataLayer = window.dataLayer || [];
