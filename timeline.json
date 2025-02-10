@@ -48,6 +48,68 @@
 	{
       "start_date": {
         "year": 2025,
+        "month": 2,
+        "day": 6
+      },
+      "end_date": {
+        "year": 2025,
+        "month": 2,
+        "day": 7
+      },
+      "text": {
+        "headline": "The First Event",
+        "text": "<p>This is the first event description.</p>"
+      },
+      "media": {
+        "url": "https://example.com/event1.jpg",
+        "caption": "An image of the first event",
+        "credit": "Image Credit"
+      },
+      "location": {
+        "lat": 40.7128,
+        "lon": -74.0060
+      },
+      "group": "Group x",
+      "display_date": "February 6, 2025",
+      "background": {
+        "color": "#ff5733"
+      },
+      "unique_id": "event8"
+    },
+	{
+      "start_date": {
+        "year": 2025,
+        "month": 2,
+        "day": 6
+      },
+      "end_date": {
+        "year": 2025,
+        "month": 2,
+        "day": 7
+      },
+      "text": {
+        "headline": "The First Event",
+        "text": "<p>This is the first event description.</p>"
+      },
+      "media": {
+        "url": "https://example.com/event1.jpg",
+        "caption": "An image of the first event",
+        "credit": "Image Credit"
+      },
+      "location": {
+        "lat": 40.7128,
+        "lon": -74.0060
+      },
+      "group": "Group G",
+      "display_date": "February 6, 2025",
+      "background": {
+        "color": "#ff5733"
+      },
+      "unique_id": "eventA"
+    },
+	{
+      "start_date": {
+        "year": 2025,
         "month": 11,
         "day": 2
       },
