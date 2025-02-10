@@ -46,6 +46,7 @@ display: none;
 .tl-timenav-slider {
     position: absolute;
     bottom: 0;  /* Fix to bottom of container */
+	z-index: 1000;
 }
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
@@ -101,7 +102,7 @@ function checkIfGroupsLoaded() {
 
             // Adjust the position of timeAxis based on scroll
             // We use transform here to apply a smoother transition instead of directly modifying top
-            timeAxis.style.transform = `translateY(${-scrollAmount}px)`;
+            timeAxis.style.transform = `translateY(${timelineEmbed.clientHeight-scrollAmount}px)`;
 
             // Log information for debugging
             console.log("Scroll position: " + -scrollAmount);
