@@ -45,6 +45,37 @@
       },
       "unique_id": "event1"
     },
+	{
+      "start_date": {
+        "year": 2025,
+        "month": 4,
+        "day": 3
+      },
+      "end_date": {
+        "year": 2025,
+        "month": 5,
+        "day": 7
+      },
+      "text": {
+        "headline": "Added Event",
+        "text": "<p>Testing</p>"
+      },
+      "media": {
+        "url": "",
+        "caption": "An image of the first event",
+        "credit": "Image Credit"
+      },
+      "location": {
+        "lat": 1.7128,
+        "lon": 1.0060
+      },
+      "group": "test group",
+      "display_date": "Yo!",
+      "background": {
+        "color": "#ff5733"
+      },
+      "unique_id": "event3"
+    },
     {
       "start_date": {
         "year": 2025,
