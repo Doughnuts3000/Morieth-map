@@ -92,7 +92,7 @@ function checkIfGroupsLoaded() {
         // Add scroll event listener once the timeline is fully loaded
         timelineEmbed.addEventListener('scroll', () => {
             const scrollAmount = timelineEmbed.scrollTop;
-           //timeAxis.style.top = `${-scrollAmount}px`;
+           timeAxis.style.top = `${timelineEmbed.height-scrollAmount}px`;
 		   console.log("Container Pos:" +scrollAmount + "Other pos:" + timeAxis.style.top);
         });
     } else {
