@@ -74,6 +74,7 @@ html, body {
             // Create the timeline with the fetched JSON
 			window.timeline = new TL.Timeline('timeline-embed', timeline_json);
 			});
+			checkIfGroupsLoaded();
          //  timeline = new TL.Timeline('timeline-embed','https://docs.google.com/spreadsheets/d/1mbJ-oPP27oUGdATrSqdkYsyvg_YPUSMDti-vgH0lMzM/edit?usp=sharing');
         
 		document.addEventListener('DOMContentLoaded', function() {
@@ -84,7 +85,7 @@ html, body {
 				groups.style.backgroundColor = '#ff00ff';
 				groups.style.color = '#00ff00';
 				})
-			} else {
+			}} else {
 				// Poll again if the groups are not loaded
 				setTimeout(checkIfGroupsLoaded, 100); // Check every 100ms
 			};
